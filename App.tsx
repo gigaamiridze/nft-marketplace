@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
-import { Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import 'react-native-gesture-handler';
 import * as SplashScreen from 'expo-splash-screen';
+import { StackNavigation } from './navigation';
 
 function App() {
   const [fontsLoaded] = useFonts({
@@ -26,7 +26,7 @@ function App() {
 
   return (
     <NavigationContainer>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <StackNavigation />
     </NavigationContainer>
   );
 }
