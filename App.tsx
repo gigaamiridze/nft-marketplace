@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
+import 'react-native-gesture-handler';
 import * as SplashScreen from 'expo-splash-screen';
 
 function App() {
@@ -24,20 +25,10 @@ function App() {
   if (!fontsLoaded) return null;
 
   return (
-    <View style={styles.container}>
+    <NavigationContainer>
       <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    </NavigationContainer>
   );
 }
 
 export default App;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
