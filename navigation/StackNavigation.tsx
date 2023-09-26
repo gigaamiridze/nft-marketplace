@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Home, Details } from '../screens';
-import { Routes } from '../constants';
+import { Routes } from '../enums';
 
 const Stack = createStackNavigator();
 

@@ -4,7 +4,6 @@ import { useFonts } from 'expo-font';
 import 'react-native-gesture-handler';
 import * as SplashScreen from 'expo-splash-screen';
 import { StackNavigation } from './navigation';
-import { images } from './constants';
 
 function App() {
   const [fontsLoaded] = useFonts({
