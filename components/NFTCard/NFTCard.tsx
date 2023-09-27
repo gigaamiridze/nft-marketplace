@@ -4,18 +4,18 @@ import { INFTCardProps } from '../../interfaces';
 import { CircleButton } from '../../components';
 import { globalStyles } from '../../styles';
 import { icons } from '../../constants';
-import { style } from './style';
+import { styles } from './styles';
 
 function NFTCard({ data }: INFTCardProps) {
   const { name, creator, price, description, image, bids } = data;
 
   return (
-    <View style={[style.cardContainer, globalStyles.marginHorizontal]}>
-      <View style={style.imageWrapper}>
+    <View style={[styles.cardContainer, globalStyles.marginHorizontal]}>
+      <View style={styles.imageWrapper}>
         <Image 
           source={image}
           resizeMode='cover'
-          style={style.image}
+          style={styles.image}
         />
         <CircleButton 
           iconUrl={icons.heart} 

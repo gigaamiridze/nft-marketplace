@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, Image } from 'react-native';
 import { ICircleButtonProps } from '../../interfaces';
-import { style } from './style';
+import { styles } from './styles';
 
 function CircleButton(props: ICircleButtonProps) {
   const { iconUrl, top, right } = props;
@@ -9,12 +9,12 @@ function CircleButton(props: ICircleButtonProps) {
   return (
     <TouchableOpacity 
       activeOpacity={0.5}
-      style={[style.button, { top, right }]}
+      style={[styles.button, { top, right }]}
     >
       <Image 
         source={iconUrl}
         resizeMode='contain'
-        style={style.icon}
+        style={styles.icon}
       />
     </TouchableOpacity>
   )

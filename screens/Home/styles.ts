@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 import { Colors } from '../../enums';
 
-export const style = StyleSheet.create({
+export const styles = StyleSheet.create({
   content: {
     zIndex: 0,
   },

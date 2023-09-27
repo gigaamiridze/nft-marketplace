@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 import { shadows } from '../../constants';
 import { Colors, Sizes } from '../../enums';
 
-export const style = StyleSheet.create({
+export const styles = StyleSheet.create({
   cardContainer: {
     backgroundColor: Colors.WHITE,
     borderRadius: Sizes.REGULAR,
