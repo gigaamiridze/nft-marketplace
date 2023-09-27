@@ -6,6 +6,6 @@ export const globalStyles = StyleSheet.create({
     flex: 1,
   },
   marginHorizontal: {
-    marginHorizontal: Sizes.X_SMALL,
+    marginHorizontal: Sizes.LARGE + 2,
   },
 });
