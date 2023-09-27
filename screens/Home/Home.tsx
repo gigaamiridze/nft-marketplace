@@ -20,6 +20,10 @@ function Home() {
             ListHeaderComponent={() => <Text>NFTs Header</Text>}
           />
         </View>
+        <View style={style.backgroundBlock}>
+          <View style={style.upperBox}></View>
+          <View style={style.lowerBox}></View>
+        </View>
       </View>
     </SafeAreaView>
   )
