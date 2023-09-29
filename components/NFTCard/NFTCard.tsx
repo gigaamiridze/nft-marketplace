@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Image } from 'react-native';
 import { INFTCardProps } from '../../interfaces';
-import { CircleButton } from '../../components';
+import { CircleButton, EthPrice } from '../../components';
 import { globalStyles } from '../../styles';
 import { icons } from '../../constants';
 import { styles } from './styles';
@@ -29,6 +29,9 @@ function NFTCard({ data }: INFTCardProps) {
         <SubInfo />
         <View style={styles.nftNameWrapper}>
           <NFTName name={name} creator={creator} />
+        </View>
+        <View style={styles.flexRow}>
+          <EthPrice price={price} />
         </View>
       </View>
     </View>

@@ -26,4 +26,9 @@ export const styles = StyleSheet.create({
   nftNameWrapper: {
     marginVertical: 5,
   },
+  flexRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  }
 });
