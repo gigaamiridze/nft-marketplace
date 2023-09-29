@@ -19,4 +19,8 @@ export const styles = StyleSheet.create({
     borderTopLeftRadius: Sizes.REGULAR,
     borderTopRightRadius: Sizes.REGULAR,
   },
+  cardInfo: {
+    marginTop: -Sizes.X_LARGE,
+    paddingBottom: Sizes.LARGE + 2,
+  },
 });

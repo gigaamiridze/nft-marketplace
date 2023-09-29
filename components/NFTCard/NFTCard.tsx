@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Image } from 'react-native';
 import { INFTCardProps } from '../../interfaces';
-import { CircleButton } from '../../components';
+import { CircleButton, SubInfo } from '../../components';
 import { globalStyles } from '../../styles';
 import { icons } from '../../constants';
 import { styles } from './styles';
@@ -22,6 +22,9 @@ function NFTCard({ data }: INFTCardProps) {
           top={15} 
           right={15} 
         />
+      </View>
+      <View style={[globalStyles.marginHorizontal, styles.cardInfo]}>
+        <SubInfo />
       </View>
     </View>
   )
