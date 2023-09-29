@@ -2,6 +2,11 @@ export interface INFTCardProps {
   data: INFTItem;
 }
 
+export interface INFTNameProps {
+  name: string;
+  creator: string;
+}
+
 interface INFTItem {
   id: string;
   name: string;

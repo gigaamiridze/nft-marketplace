@@ -1,8 +1,8 @@
 import React from 'react';
 import { View } from 'react-native';
-import People from './People';
-import EndDate from './EndDate';
 import { styles } from './styles';
+import EndDate from './EndDate';
+import People from './People';
 
 function SubInfo() {
   return (

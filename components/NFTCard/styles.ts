@@ -23,4 +23,7 @@ export const styles = StyleSheet.create({
     marginTop: -Sizes.X_LARGE,
     paddingBottom: Sizes.LARGE + 2,
   },
+  nftNameWrapper: {
+    marginVertical: 5,
+  },
 });
