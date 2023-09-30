@@ -1,5 +1,6 @@
 import React from 'react';
-import { SafeAreaView, Text } from 'react-native';
+import { SafeAreaView, View } from 'react-native';
+import RectButton from '../../components/RectButton/RectButton';
 import { FocusedStatusBar } from '../../components';
 import { globalStyles } from '../../styles';
 import { styles } from './styles';
@@ -12,7 +13,13 @@ function Details() {
         barStyle='dark-content'
         translucent={true}
       />
-      <Text>Details</Text>
+      <View style={styles.buttonWrapper}>
+        <RectButton  
+          title='Place a bid'
+          minWidth={170}
+          headingType={2}
+        />
+      </View>
     </SafeAreaView>
   )
 }

@@ -1,3 +1,15 @@
 import { StyleSheet } from 'react-native';
+import { Sizes } from '../../enums';
 
-export const styles = StyleSheet.create({});
+export const styles = StyleSheet.create({
+  buttonWrapper: {
+    width: '100%',
+    position: 'absolute',
+    bottom: 0,
+    backgroundColor: 'rgba(255, 255, 255, 0.5)',
+    marginVertical: Sizes.REGULAR,
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 1,
+  },
+});
