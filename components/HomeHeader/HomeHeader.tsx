@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Image } from 'react-native';
-import { images } from '../../constants';
+import { images, icons } from '../../constants';
 import { styles } from './styles';
 
 function HomeHeader() {
@@ -17,6 +17,11 @@ function HomeHeader() {
             source={images.person01}
             resizeMode='contain'
             style={styles.personImage}
+          />
+          <Image 
+            source={icons.badge}
+            resizeMode='contain'
+            style={styles.badge}
           />
         </View>
       </View>
