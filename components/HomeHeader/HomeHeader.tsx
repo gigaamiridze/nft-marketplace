@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Image } from 'react-native';
 import { images, icons } from '../../constants';
+import { Heading } from '../../components';
+import { Colors } from '../../enums';
 import { styles } from './styles';
 
 function HomeHeader() {
@@ -24,6 +26,20 @@ function HomeHeader() {
             style={styles.badge}
           />
         </View>
+      </View>
+      <View style={styles.titlesContainer}>
+        <Heading 
+          title='Hello Victoria 👋'
+          type={5}
+          color={Colors.WHITE}
+          fontWeight='regular'
+        />
+        <Heading 
+          title="Let's Find Masterpiece Art"
+          type={2}
+          color={Colors.WHITE}
+          fontWeight='bold'
+        />
       </View>
     </View>
   )

@@ -29,4 +29,8 @@ export const styles = StyleSheet.create({
     right: 0,
     bottom: 0,
   },
+  titlesContainer: {
+    marginVertical: Sizes.SMALL,
+    rowGap: 5,
+  },
 });
