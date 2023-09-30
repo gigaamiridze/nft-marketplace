@@ -1,9 +1,10 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
+import { IRootStackParams } from '../interfaces';
 import { Home, Details } from '../screens';
 import { Routes } from '../enums';
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<IRootStackParams>();
 
 function StackNavigation() {
   return (

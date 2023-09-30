@@ -7,7 +7,7 @@ export interface INFTNameProps {
   creator: string;
 }
 
-interface INFTItem {
+export interface INFTItem {
   id: string;
   name: string;
   creator: string;
@@ -17,7 +17,7 @@ interface INFTItem {
   bids: INFTBidItem[];
 }
 
-interface INFTBidItem {
+export interface INFTBidItem {
   id: string;
   name: string;
   price: number;

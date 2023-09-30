@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 0,
     backgroundColor: 'rgba(255, 255, 255, 0.5)',
-    marginVertical: Sizes.REGULAR,
+    paddingVertical: Sizes.REGULAR,
     alignItems: 'center',
     justifyContent: 'center',
     zIndex: 1,
