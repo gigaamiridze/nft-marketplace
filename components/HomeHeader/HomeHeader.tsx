@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image } from 'react-native';
+import { View, Image, TextInput } from 'react-native';
 import { images, icons } from '../../constants';
 import { Heading } from '../../components';
 import { Colors } from '../../enums';
@@ -39,6 +39,18 @@ function HomeHeader() {
           type={2}
           color={Colors.WHITE}
           fontWeight='bold'
+          numberOfLines={1}
+        />
+      </View>
+      <View style={styles.searchContainer}>
+        <Image 
+          source={icons.search}
+          resizeMode='contain'
+          style={styles.searchIcon}
+        />
+        <TextInput 
+          placeholder='Search NFTs'
+          style={styles.searchInput}
         />
       </View>
     </View>
