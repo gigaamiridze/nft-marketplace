@@ -1,5 +1,6 @@
 import React from 'react';
 import { SafeAreaView, View, FlatList, Text } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 import NFTCard from '../../components/NFTCard/NFTCard';
 import { FocusedStatusBar } from '../../components';
 import { globalStyles } from '../../styles';
@@ -22,7 +23,12 @@ function Home() {
           />
         </View>
         <View style={styles.backgroundBlock}>
-          <View style={styles.upperBox}></View>
+          <LinearGradient 
+            colors={[Colors.DARK_GRAY, Colors.PRIMARY]}
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 1 }}
+            style={styles.upperBox}
+          />
           <View style={styles.lowerBox}></View>
         </View>
       </View>

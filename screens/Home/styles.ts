@@ -15,7 +15,6 @@ export const styles = StyleSheet.create({
   },
   upperBox: {
     height: 300,
-    backgroundColor: Colors.PRIMARY,
   },
   lowerBox: {
     flex: 1,
