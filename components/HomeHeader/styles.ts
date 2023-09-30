@@ -13,5 +13,13 @@ export const styles = StyleSheet.create({
   logo: {
     width: 90,
     height: 25,
-  },  
+  },
+  imageWrapper: {
+    width: 45,
+    height: 45,
+  },
+  personImage: {
+    width: '100%',
+    height: '100%',
+  },
 });

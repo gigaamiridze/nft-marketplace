@@ -12,6 +12,13 @@ function HomeHeader() {
           resizeMode='contain'
           style={styles.logo}
         />
+        <View style={styles.imageWrapper}>
+          <Image 
+            source={images.person01}
+            resizeMode='contain'
+            style={styles.personImage}
+          />
+        </View>
       </View>
     </View>
   )
