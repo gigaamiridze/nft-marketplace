@@ -1,3 +1,5 @@
 export interface IFocusedStatusBarProps {
-  background: string;
+  backgroundColor: string;
+  barStyle?: 'default' | 'dark-content' | 'light-content';
+  translucent?: boolean; 
 }

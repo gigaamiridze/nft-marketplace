@@ -12,7 +12,7 @@ import { styles } from './styles';
 function Home() {
   return (
     <SafeAreaView style={globalStyles.flex}>
-      <FocusedStatusBar background={Colors.PRIMARY} />
+      <FocusedStatusBar backgroundColor={Colors.PRIMARY} />
       <View style={globalStyles.flex}>
         <View style={styles.content}>
           <FlatList 
