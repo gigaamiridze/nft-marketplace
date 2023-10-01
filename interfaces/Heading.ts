@@ -4,6 +4,7 @@ export interface IHeadingProps {
   color?: string;
   numberOfLines?: number;
   fontWeight?: FontWeightType; 
+  lineHeight?: number; 
 }
 
 type FontWeightType = 'light' | 'regular' | 'medium' | 'semiBold' | 'bold';

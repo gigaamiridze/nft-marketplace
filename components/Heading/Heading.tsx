@@ -5,7 +5,7 @@ import { styles } from './styles';
 import { IHeadingProps } from '../../interfaces';
 
 function Heading(props: IHeadingProps) {
-  const { title, type, color, numberOfLines, fontWeight } = props;
+  const { title, type, color, numberOfLines, fontWeight, lineHeight } = props;
 
   const styleToApply = () => {
     switch (type) {
@@ -50,7 +50,8 @@ function Heading(props: IHeadingProps) {
         styles.title,
         styleToApply(),
         color ? { color } : null,
-        fontWeight ? { fontFamily: applyFontWeight() } : null
+        fontWeight ? { fontFamily: applyFontWeight() } : null,
+        lineHeight ? { lineHeight } : null
       ]}
     >
       {title}

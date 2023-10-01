@@ -2,6 +2,7 @@ import React from 'react';
 import { SafeAreaView, View, FlatList } from 'react-native';
 import { RouteProp, useRoute } from '@react-navigation/native';
 import DetailsHeader from '../../components/DetailsHeader/DetailsHeader';
+import DetailsDesc from '../../components/DetailsDesc/DetailsDesc';
 import RectButton from '../../components/RectButton/RectButton';
 import EthPrice from '../../components/EthPrice/EthPrice';
 import SubInfo from '../../components/SubInfo/SubInfo';
@@ -44,6 +45,7 @@ function Details() {
                 <NFTName name={data.name} creator={data.creator} />
                 <EthPrice price={data.price} />
               </View>
+              <DetailsDesc description={data.description} />
             </View>
           </>
         )}

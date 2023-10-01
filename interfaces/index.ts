@@ -1,4 +1,5 @@
 export * from './FocusedStatusBar';
+export * from './Description';
 export * from './EthPrice';
 export * from './Heading';
 export * from './Button';

@@ -16,6 +16,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginVertical: Sizes.X_LARGE,
+    marginTop: Sizes.X_LARGE,
+    marginBottom: Sizes.LARGE + 2,
   },
 });
