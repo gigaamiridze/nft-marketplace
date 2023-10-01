@@ -4,13 +4,13 @@ import { ICircleButtonProps } from '../../interfaces';
 import { styles } from './styles';
 
 function CircleButton(props: ICircleButtonProps) {
-  const { iconUrl, top, right, handlePress } = props;
+  const { iconUrl, top, left, right, handlePress } = props;
 
   return (
     <TouchableOpacity 
       activeOpacity={0.5}
       onPress={handlePress}
-      style={[styles.button, { top, right }]}
+      style={[styles.button, { top, left, right }]}
     >
       <Image 
         source={iconUrl}
