@@ -1,8 +1,8 @@
 import React from 'react';
 import { SafeAreaView, View, FlatList } from 'react-native';
 import { RouteProp, useRoute } from '@react-navigation/native';
+import { FocusedStatusBar, BidItem, DetailsHeader } from '../../components';
 import RectButton from '../../components/RectButton/RectButton';
-import { FocusedStatusBar, BidItem } from '../../components';
 import { IRootStackParams } from '../../interfaces';
 import { globalStyles } from '../../styles';
 import { styles } from './styles';
@@ -10,7 +10,7 @@ import { styles } from './styles';
 function Details() {
   type DetailsScreenProps = RouteProp<IRootStackParams, 'Details'>;
   const route = useRoute<DetailsScreenProps>();
-  const { bids } = route.params.data;
+  const { data } = route.params;
 
   return (
     <SafeAreaView style={globalStyles.flex}>
@@ -27,10 +27,11 @@ function Details() {
         />
       </View>
       <FlatList 
-        data={bids}
+        data={data.bids}
         keyExtractor={(item) => item.id}
         showsVerticalScrollIndicator={false}
         renderItem={({ item }) => <BidItem bid={item} />}
+        ListHeaderComponent={() => <DetailsHeader data={data} />}
       />
     </SafeAreaView>
   )
