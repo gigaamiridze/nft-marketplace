@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    marginTop: -Sizes.X_LARGE - 4,
   },
   peopleContainer: {
     flexDirection: 'row',

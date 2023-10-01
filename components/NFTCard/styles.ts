@@ -20,7 +20,6 @@ export const styles = StyleSheet.create({
     borderTopRightRadius: Sizes.REGULAR,
   },
   cardInfo: {
-    marginTop: -Sizes.X_LARGE,
     paddingBottom: Sizes.LARGE + 2,
   },
   nftNameWrapper: {

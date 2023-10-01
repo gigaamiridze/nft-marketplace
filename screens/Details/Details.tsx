@@ -1,8 +1,10 @@
 import React from 'react';
 import { SafeAreaView, View, FlatList } from 'react-native';
 import { RouteProp, useRoute } from '@react-navigation/native';
-import { FocusedStatusBar, BidItem, DetailsHeader } from '../../components';
+import DetailsHeader from '../../components/DetailsHeader/DetailsHeader';
 import RectButton from '../../components/RectButton/RectButton';
+import SubInfo from '../../components/SubInfo/SubInfo';
+import { FocusedStatusBar, BidItem } from '../../components';
 import { IRootStackParams } from '../../interfaces';
 import { globalStyles } from '../../styles';
 import { styles } from './styles';
@@ -31,7 +33,14 @@ function Details() {
         keyExtractor={(item) => item.id}
         showsVerticalScrollIndicator={false}
         renderItem={({ item }) => <BidItem bid={item} />}
-        ListHeaderComponent={() => <DetailsHeader data={data} />}
+        ListHeaderComponent={() => (
+          <>
+            <DetailsHeader data={data} />
+            <View style={globalStyles.marginHorizontal}>
+              <SubInfo />
+            </View>
+          </>
+        )}
       />
     </SafeAreaView>
   )
