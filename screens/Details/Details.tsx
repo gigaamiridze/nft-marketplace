@@ -3,7 +3,9 @@ import { SafeAreaView, View, FlatList } from 'react-native';
 import { RouteProp, useRoute } from '@react-navigation/native';
 import DetailsHeader from '../../components/DetailsHeader/DetailsHeader';
 import RectButton from '../../components/RectButton/RectButton';
+import EthPrice from '../../components/EthPrice/EthPrice';
 import SubInfo from '../../components/SubInfo/SubInfo';
+import NFTName from '../../components/NFTName';
 import { FocusedStatusBar, BidItem } from '../../components';
 import { IRootStackParams } from '../../interfaces';
 import { globalStyles } from '../../styles';
@@ -16,28 +18,32 @@ function Details() {
 
   return (
     <SafeAreaView style={globalStyles.flex}>
-      <FocusedStatusBar 
-        backgroundColor='transparent' 
+      <FocusedStatusBar
+        backgroundColor='transparent'
         barStyle='dark-content'
         translucent={true}
       />
       <View style={styles.buttonWrapper}>
-        <RectButton  
+        <RectButton
           title='Place a bid'
           minWidth={170}
           headingType={2}
         />
       </View>
-      <FlatList 
+      <FlatList
         data={data.bids}
         keyExtractor={(item) => item.id}
         showsVerticalScrollIndicator={false}
         renderItem={({ item }) => <BidItem bid={item} />}
         ListHeaderComponent={() => (
           <>
-            <DetailsHeader data={data} />
+            <DetailsHeader image={data.image} />
             <View style={globalStyles.marginHorizontal}>
               <SubInfo />
+              <View style={styles.flexRow}>
+                <NFTName name={data.name} creator={data.creator} />
+                <EthPrice price={data.price} />
+              </View>
             </View>
           </>
         )}

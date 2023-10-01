@@ -6,14 +6,14 @@ import { CircleButton } from '../../components';
 import { icons } from '../../constants';
 import { styles } from './styles';
 
-function DetailsHeader({ data }: IDetailsHeaderProps) {
+function DetailsHeader({ image }: IDetailsHeaderProps) {
   const navigation = useNavigation();
   const statusBarHeight = StatusBar.currentHeight !== undefined ? StatusBar.currentHeight : 0;
 
   return (
     <View style={styles.container}>
       <Image 
-        source={data.image}
+        source={image}
         resizeMode='cover'
         style={styles.image}
       />

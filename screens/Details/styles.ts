@@ -12,4 +12,10 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     zIndex: 1,
   },
+  flexRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginVertical: Sizes.X_LARGE,
+  },
 });
