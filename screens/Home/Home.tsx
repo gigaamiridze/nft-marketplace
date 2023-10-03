@@ -1,28 +1,54 @@
-import React from 'react';
-import { SafeAreaView, View, FlatList } from 'react-native';
+import React, { useState } from 'react';
+import { SafeAreaView, ScrollView, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import HomeHeader from '../../components/HomeHeader/HomeHeader';
 import NFTCard from '../../components/NFTCard/NFTCard';
 import { FocusedStatusBar } from '../../components';
-import HomeHeader from '../../components/HomeHeader/HomeHeader';
+import { INFTItem } from '../../interfaces';
 import { globalStyles } from '../../styles';
 import { Colors } from '../../enums';
 import { NFTData } from '../../data';
 import { styles } from './styles';
 
 function Home() {
+  const [searchValue, setSearchValue] = useState<string>('');
+  const [nftData, setNftData] = useState<INFTItem[]>(NFTData);
+
+  const handleSearch = (value: string) => {
+    setSearchValue(value);
+
+    if (value.length === 0) setNftData(NFTData);
+
+    const filteredData = NFTData.filter((item) => 
+      item.name.toLowerCase().includes(value.toLowerCase())
+    );
+
+    if (filteredData.length === 0) {
+      setNftData(NFTData);
+    } else {
+      setNftData(filteredData);
+    }
+  };
+  
   return (
     <SafeAreaView style={globalStyles.flex}>
       <FocusedStatusBar backgroundColor={Colors.PRIMARY} />
       <View style={globalStyles.flex}>
-        <View style={styles.content}>
-          <FlatList 
-            data={NFTData}
-            keyExtractor={(item) => item.id}
-            showsVerticalScrollIndicator={false}
-            renderItem={({ item }) => <NFTCard data={item} />}
-            ListHeaderComponent={() => <HomeHeader />}
+        <ScrollView 
+          showsVerticalScrollIndicator={false}
+          style={styles.content}
+        >
+          <HomeHeader 
+            searchValue={searchValue} 
+            handleSearch={handleSearch}
           />
-        </View>
+          {nftData.map((item) => (
+            <NFTCard 
+              key={item.id}
+              data={item}
+            />
+          ))}
+        </ScrollView>
         <View style={styles.backgroundBlock}>
           <LinearGradient 
             colors={[Colors.DARK_GRAY, Colors.PRIMARY]}

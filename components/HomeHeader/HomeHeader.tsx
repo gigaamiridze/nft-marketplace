@@ -1,11 +1,12 @@
 import React from 'react';
 import { View, Image, TextInput } from 'react-native';
+import { IHomeHeaderProps } from '../../interfaces';
 import { images, icons } from '../../constants';
 import { Heading } from '../../components';
 import { Colors } from '../../enums';
 import { styles } from './styles';
 
-function HomeHeader() {
+function HomeHeader({ searchValue, handleSearch }: IHomeHeaderProps) {
   return (
     <View style={styles.container}>
       <View style={styles.flexRow}>
@@ -50,7 +51,10 @@ function HomeHeader() {
         />
         <TextInput 
           placeholder='Search NFTs'
+          placeholderTextColor={Colors.WHITE}
           style={styles.searchInput}
+          value={searchValue}
+          onChangeText={(text) => handleSearch(text)}
         />
       </View>
     </View>
