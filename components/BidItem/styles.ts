@@ -1,11 +1,16 @@
 import { StyleSheet } from 'react-native';
-import { Colors, Fonts } from '../../enums';
+import { Colors, Fonts, Sizes } from '../../enums';
 
 export const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+  },
+  leftContent: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    columnGap: Sizes.X_LARGE,
   },
   image: {
     width: 48,

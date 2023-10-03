@@ -6,12 +6,12 @@ import DetailsDesc from '../../components/DetailsDesc/DetailsDesc';
 import RectButton from '../../components/RectButton/RectButton';
 import EthPrice from '../../components/EthPrice/EthPrice';
 import SubInfo from '../../components/SubInfo/SubInfo';
+import BidItem from '../../components/BidItem/BidItem';
 import NFTName from '../../components/NFTName';
-import { FocusedStatusBar, BidItem, Heading } from '../../components';
+import { FocusedStatusBar, Heading } from '../../components';
 import { IRootStackParams } from '../../interfaces';
 import { globalStyles } from '../../styles';
 import { styles } from './styles';
-import { Sizes } from '../../enums';
 
 function Details() {
   type DetailsScreenProps = RouteProp<IRootStackParams, 'Details'>;
