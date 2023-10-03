@@ -1,8 +1,10 @@
 import React from 'react';
-import { View, Image } from 'react-native';
+import { View, Image, Text } from 'react-native';
 import { IBidItemProps } from '../../interfaces';
+import { Heading } from '../../components';
 import { globalStyles } from '../../styles';
 import { styles } from './styles';
+import { Colors } from '../../enums';
 
 function BidItem({ bid }: IBidItemProps) {
   const { name, price, image, date } = bid;
@@ -14,6 +16,13 @@ function BidItem({ bid }: IBidItemProps) {
         resizeMode='contain'
         style={styles.image}
       />
+      <View style={styles.titlesContainer}>
+        <Heading 
+          title={`Bid placed by ${name}`}
+          type={5}
+        />
+        <Text style={styles.dateTitle}>{date}</Text>
+      </View>
     </View>
   )
 }

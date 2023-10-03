@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { Colors, Fonts } from '../../enums';
 
 export const styles = StyleSheet.create({
   container: {
@@ -9,5 +10,13 @@ export const styles = StyleSheet.create({
   image: {
     width: 48,
     height: 48,
+  },
+  titlesContainer: {
+    rowGap: 5,
+  },
+  dateTitle: {
+    fontSize: 10,
+    fontFamily: Fonts.InterRegular,
+    color: Colors.SECONDARY,
   },
 });
