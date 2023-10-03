@@ -12,7 +12,7 @@ function DetailsDesc({ description }: IDetailsDescProps) {
   return (
     <View style={styles.container}>
       <Heading
-        title={'Description'}
+        title='Description'
         type={4}
       />
       <Heading

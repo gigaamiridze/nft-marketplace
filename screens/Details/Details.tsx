@@ -7,7 +7,7 @@ import RectButton from '../../components/RectButton/RectButton';
 import EthPrice from '../../components/EthPrice/EthPrice';
 import SubInfo from '../../components/SubInfo/SubInfo';
 import NFTName from '../../components/NFTName';
-import { FocusedStatusBar, BidItem } from '../../components';
+import { FocusedStatusBar, BidItem, Heading } from '../../components';
 import { IRootStackParams } from '../../interfaces';
 import { globalStyles } from '../../styles';
 import { styles } from './styles';
@@ -46,6 +46,12 @@ function Details() {
                 <EthPrice price={data.price} />
               </View>
               <DetailsDesc description={data.description} />
+              <View style={styles.bidTitle}>
+                <Heading 
+                  title='Current Bid'
+                  type={4}
+                />
+              </View>
             </View>
           </>
         )}

@@ -19,4 +19,8 @@ export const styles = StyleSheet.create({
     marginTop: Sizes.X_LARGE,
     marginBottom: Sizes.LARGE + 2,
   },
+  bidTitle: {
+    marginTop: Sizes.LARGE + 2,
+    marginBottom: Sizes.X_SMALL,
+  },
 });
