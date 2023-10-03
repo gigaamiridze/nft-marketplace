@@ -17,5 +17,5 @@ Welcome to NFT Marketplace, the ultimate mobile gateway to the world of NFTs! Ou
 <img src='assets/images/scene.png' height='330' alt='Scene' />
 <img src='assets/images/home_hero.png' height='330' alt='Home Hero' />
 <img src='assets/images/mockup.png' height='330' alt='Mockup' />
-<img src='assets/images/home_cards.png' height='330' alt='Home Cards' />
 <img src='assets/images/feature.png' height='330' alt='Feature' />
+<img src='assets/images/home_cards.png' height='330' alt='Home Cards' />
