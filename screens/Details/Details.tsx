@@ -11,6 +11,7 @@ import { FocusedStatusBar, BidItem, Heading } from '../../components';
 import { IRootStackParams } from '../../interfaces';
 import { globalStyles } from '../../styles';
 import { styles } from './styles';
+import { Sizes } from '../../enums';
 
 function Details() {
   type DetailsScreenProps = RouteProp<IRootStackParams, 'Details'>;
@@ -36,6 +37,7 @@ function Details() {
         keyExtractor={(item) => item.id}
         showsVerticalScrollIndicator={false}
         renderItem={({ item }) => <BidItem bid={item} />}
+        contentContainerStyle={styles.contentContainer}
         ListHeaderComponent={() => (
           <>
             <DetailsHeader image={data.image} />
@@ -46,12 +48,14 @@ function Details() {
                 <EthPrice price={data.price} />
               </View>
               <DetailsDesc description={data.description} />
-              <View style={styles.bidTitle}>
-                <Heading 
-                  title='Current Bid'
-                  type={4}
-                />
-              </View>
+              {data.bids.length > 0 && (
+                <View style={styles.bidTitle}>
+                  <Heading
+                    title='Current Bid'
+                    type={4}
+                  />
+                </View>
+              )}
             </View>
           </>
         )}

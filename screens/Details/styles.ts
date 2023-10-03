@@ -2,6 +2,10 @@ import { StyleSheet } from 'react-native';
 import { Sizes } from '../../enums';
 
 export const styles = StyleSheet.create({
+  contentContainer: {
+    paddingBottom: Sizes.X_LARGE * 4,
+    rowGap: Sizes.REGULAR,
+  },
   buttonWrapper: {
     width: '100%',
     position: 'absolute',
@@ -21,6 +25,5 @@ export const styles = StyleSheet.create({
   },
   bidTitle: {
     marginTop: Sizes.LARGE + 2,
-    marginBottom: Sizes.X_SMALL,
   },
 });
